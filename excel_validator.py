@@ -48,14 +48,14 @@ def validate_excel(input_file: str, master_file: str, output_file: str = "valida
 
     # 4) Сохраняем результат
     df_subset.to_excel(output_file, index=False)
-    print(f"✅ Валидация завершена. Результат сохранён в: {output_file}")
+    print(f"Валидация завершена. Результат сохранён в: {output_file}")
 
 
 if __name__ == "__main__":
     # Использование из командной строки
     # Пример: python excel_validator.py input.xlsx master_data.xlsx output.xlsx
     if len(sys.argv) < 3:
-        print("⚙️ Использование: python excel_validator.py <input.xlsx> <master_data.xlsx> [output.xlsx]")
+        print("Использование: python excel_validator.py <input.xlsx> <master_data.xlsx> [output.xlsx]")
         sys.exit(0)
 
     input_path = sys.argv[1]
