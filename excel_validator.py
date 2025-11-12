@@ -13,15 +13,15 @@ def validate_excel(input_file: str, master_file: str, output_file: str = "valida
 
     # Проверяем существование файлов
     if not os.path.exists(input_file):
-        print(f"❌ Ошибка: файл '{input_file}' не найден.")
+        print(f"Ошибка: файл '{input_file}' не найден.")
         sys.exit(1)
 
     if not os.path.exists(master_file):
-        print(f"❌ Ошибка: файл '{master_file}' не найден.")
+        print(f"Ошибка: файл '{master_file}' не найден.")
         sys.exit(1)
 
     # Загружаем данные
-    print("📥 Загрузка данных...")
+    print("Загрузка данных...")
     df = pd.read_excel(input_file)
     master = pd.read_excel(master_file)
 
